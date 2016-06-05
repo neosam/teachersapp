@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>680</width>
+    <height>382</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Aktionen</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="actionButtonClasses">
+        <property name="text">
+         <string>Klassen</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="actionButtonLessons">
+        <property name="text">
+         <string>Fächer</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_7">
+        <property name="text">
+         <string>Noten</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_8">
+        <property name="text">
+         <string>Schülerbeobachtungen</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="main">
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose your action&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::RichText</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="classes_view">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Klassen</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="addSchoolButton">
+            <property name="text">
+             <string>Schule hinzufügen</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="ClassSelectionWidget" name="classSelectionWidget" native="true"/>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_3">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="ClassDetailWidget" name="schoolClassDetails" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="LessonListWidget" name="widget" native="true"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>680</width>
+     <height>19</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ClassSelectionWidget</class>
+   <extends>QWidget</extends>
+   <header>classselectionwidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>openSchoolClass(SchoolClass)</signal>
+    <slot>addSchool(School)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>ClassDetailWidget</class>
+   <extends>QWidget</extends>
+   <header>classdetailwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LessonListWidget</class>
+   <extends>QWidget</extends>
+   <header>lessonlistwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionButtonClasses</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>activateClasses()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>83</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>339</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addSchoolButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>addSchoolAction()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>601</x>
+     <y>65</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>339</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>schoolAdded(School)</signal>
+   <receiver>classSelectionWidget</receiver>
+   <slot>addSchool(School)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>421</x>
+     <y>88</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>classSelectionWidget</sender>
+   <signal>openSchoolClass(SchoolClass)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showClassDetails(SchoolClass)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>421</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>339</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionButtonLessons</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>activateLessons()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>83</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>339</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>schoolAdded(School)</signal>
+  <slot>activateClasses()</slot>
+  <slot>addSchoolAction()</slot>
+  <slot>showClassDetails(SchoolClass)</slot>
+  <slot>activateLessons()</slot>
+ </slots>
+</ui>

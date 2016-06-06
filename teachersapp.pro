@@ -25,7 +25,8 @@ SOURCES += main.cpp\
     pupiltablemodel.cpp \
     lessonlistwidget.cpp \
     lessonschedulemodel.cpp \
-    lessonschedule.cpp
+    lessonschedule.cpp \
+    lesson.cpp
 
 HEADERS  += mainwindow.h \
     dataio.h \
@@ -39,7 +40,8 @@ HEADERS  += mainwindow.h \
     pupiltablemodel.h \
     lessonlistwidget.h \
     lessonschedulemodel.h \
-    lessonschedule.h
+    lessonschedule.h \
+    lesson.h
 
 FORMS    += mainwindow.ui \
     schoolclasswidget.ui \

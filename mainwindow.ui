@@ -50,6 +50,13 @@
        </widget>
       </item>
       <item>
+       <widget class="QPushButton" name="actionButtonSchedule">
+        <property name="text">
+         <string>Stundenplan</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="pushButton_7">
         <property name="text">
          <string>Noten</string>
@@ -94,7 +101,7 @@
     <item>
      <widget class="QStackedWidget" name="main">
       <property name="currentIndex">
-       <number>3</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -180,6 +187,13 @@
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="page_4">
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="LessonSchedule" name="widget_2" native="true"/>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -226,6 +240,12 @@
    <class>LessonListWidget</class>
    <extends>QWidget</extends>
    <header>lessonlistwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LessonSchedule</class>
+   <extends>QWidget</extends>
+   <header>lessonschedule.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
@@ -311,6 +331,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>actionButtonSchedule</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>activateSchedule()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>83</x>
+     <y>137</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>339</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <signal>schoolAdded(School)</signal>
@@ -318,5 +354,6 @@
   <slot>addSchoolAction()</slot>
   <slot>showClassDetails(SchoolClass)</slot>
   <slot>activateLessons()</slot>
+  <slot>activateSchedule()</slot>
  </slots>
 </ui>

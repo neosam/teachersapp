@@ -26,6 +26,11 @@ void MainWindow::activateLessons()
     ui->main->setCurrentIndex(3);
 }
 
+void MainWindow::activateSchedule()
+{
+    ui->main->setCurrentIndex(4);
+}
+
 void MainWindow::addSchoolAction()
 {
     QString name = QInputDialog::getText(this,

@@ -23,6 +23,7 @@ private:
 public slots:
     void activateClasses();
     void activateLessons();
+    void activateSchedule();
     void addSchoolAction();
     void showClassDetails(SchoolClass schoolClass);
 

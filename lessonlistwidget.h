@@ -20,6 +20,9 @@ private:
     Ui::LessonListWidget *ui;
     QSqlTableModel *model;
 
+public slots:
+    void addLesson();
+
 };
 
 #endif // LESSONLISTWIDGET_H

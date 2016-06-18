@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     lessonlistwidget.cpp \
     lessonschedulemodel.cpp \
     lessonschedule.cpp \
-    lesson.cpp
+    lesson.cpp \
+    addscheduledialog.cpp
 
 HEADERS  += mainwindow.h \
     dataio.h \
@@ -41,11 +42,13 @@ HEADERS  += mainwindow.h \
     lessonlistwidget.h \
     lessonschedulemodel.h \
     lessonschedule.h \
-    lesson.h
+    lesson.h \
+    addscheduledialog.h
 
 FORMS    += mainwindow.ui \
     schoolclasswidget.ui \
     schoolclassitemwidget.ui \
     classdetailwidget.ui \
     lessonlistwidget.ui \
-    lessonschedule.ui
+    lessonschedule.ui \
+    addscheduledialog.ui

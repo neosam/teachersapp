@@ -19,6 +19,9 @@ public:
 private:
     Ui::LessonSchedule *ui;
     LessonScheduleModel *model;
+
+public slots:
+    void editEntry(QModelIndex index);
 };
 
 #endif // LESSONSCHEDULE_H

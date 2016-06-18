@@ -36,7 +36,8 @@ QList<School> School::all()
                   "FROM school");
     if (!query.exec()) {
         qDebug() << "School::all SQL error: "
-                 << query.lastError().driverText();
+                 << query.lastError().driverText()
+                 << " - " << query.lastError().databaseText();
     }
     while(query.next()) {
         School school(QUuid(query.value("school_key").toString()),

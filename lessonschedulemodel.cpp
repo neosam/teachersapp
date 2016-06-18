@@ -1,5 +1,7 @@
 #include "lessonschedulemodel.h"
 
+#include "addscheduledialog.h"
+
 LessonScheduleModel::LessonScheduleModel()
 {
 
@@ -32,3 +34,5 @@ QVariant LessonScheduleModel::headerData(int section, Qt::Orientation orientatio
         return section + 1;
     }
 }
+
+

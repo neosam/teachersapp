@@ -13,14 +13,6 @@ TEMPLATE = app
 
 GIT_VERSION = $$system(git --git-dir $$PWD/.git --work-tree $$PWD describe --always --tags --dirty)
 DEFINES += GIT_VERSION=\\\"$$GIT_VERSION\\\"
-VERSION = $$GIT_VERSION
-win32 {
-    VERSION ~= s/-\d+-g[a-f0-9]{6,}//
-}
-macx {
-    INFO_PLIST_PATH = $$shell_quote($${OUT_PWD}/$${TARGET}.app/Contents/Info.plist)
-    QMAKE_POST_LINK += /usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $${VERSION}\" $${INFO_PLIST_PATH}
-}
 
 SOURCES += main.cpp\
         mainwindow.cpp \

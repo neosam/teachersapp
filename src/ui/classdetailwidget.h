@@ -2,8 +2,8 @@
 #define CLASSDETAILWIDGET_H
 
 #include <QWidget>
-#include "schoolclass.h"
-#include "pupil.h"
+#include "src/model/schoolclass.h"
+#include "src/model/pupil.h"
 #include <QtSql>
 
 namespace Ui {

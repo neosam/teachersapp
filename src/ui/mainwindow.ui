@@ -190,7 +190,7 @@
       <widget class="QWidget" name="page_4">
        <layout class="QHBoxLayout" name="horizontalLayout_5">
         <item>
-         <widget class="LessonSchedule" name="widget_2" native="true"/>
+         <widget class="LessonScheduleWidget" name="widget_2" native="true"/>
         </item>
        </layout>
       </widget>
@@ -228,7 +228,7 @@
   <customwidget>
    <class>ClassSelectionWidget</class>
    <extends>QWidget</extends>
-   <header>classselectionwidget.h</header>
+   <header location="global">src/ui/classselectionwidget.h</header>
    <container>1</container>
    <slots>
     <signal>openSchoolClass(SchoolClass)</signal>
@@ -238,19 +238,19 @@
   <customwidget>
    <class>ClassDetailWidget</class>
    <extends>QWidget</extends>
-   <header>classdetailwidget.h</header>
+   <header location="global">src/ui/classdetailwidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>LessonListWidget</class>
    <extends>QWidget</extends>
-   <header>lessonlistwidget.h</header>
+   <header location="global">src/ui/lessonlistwidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>LessonSchedule</class>
+   <class>LessonScheduleWidget</class>
    <extends>QWidget</extends>
-   <header>lessonschedule.h</header>
+   <header>src/ui/lessonschedulewidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

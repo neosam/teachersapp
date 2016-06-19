@@ -1,5 +1,5 @@
 #include "classselectionwidget.h"
-#include "school.h"
+#include "src/model/school.h"
 #include <QList>
 #include <QVBoxLayout>
 #include <QLabel>

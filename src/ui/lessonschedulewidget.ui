@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>LessonSchedule</class>
- <widget class="QWidget" name="LessonSchedule">
+ <class>LessonScheduleWidget</class>
+ <widget class="QWidget" name="LessonScheduleWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -36,7 +36,7 @@
   <connection>
    <sender>scheduleTable</sender>
    <signal>doubleClicked(QModelIndex)</signal>
-   <receiver>LessonSchedule</receiver>
+   <receiver>LessonScheduleWidget</receiver>
    <slot>editEntry(QModelIndex)</slot>
    <hints>
     <hint type="sourcelabel">

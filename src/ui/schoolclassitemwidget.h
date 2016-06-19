@@ -2,7 +2,7 @@
 #define SCHOOLCLASSITEMWIDGET_H
 
 #include <QWidget>
-#include "schoolclass.h"
+#include "src/model/schoolclass.h"
 
 namespace Ui {
 class SchoolClassItemWidget;

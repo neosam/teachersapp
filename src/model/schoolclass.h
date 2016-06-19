@@ -3,7 +3,7 @@
 
 #include <QUuid>
 #include <QList>
-#include <school.h>
+#include "school.h"
 
 class SchoolClass
 {

@@ -1,7 +1,7 @@
 #include "addscheduledialog.h"
 #include "ui_addscheduledialog.h"
 
-#include "schoolsubject.h"
+#include "src/model/schoolsubject.h"
 
 AddScheduleDialog::AddScheduleDialog(int weekday, int lessonCount, QWidget *parent) :
     QDialog(parent),

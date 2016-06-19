@@ -1,25 +1,25 @@
-#include "lessonschedule.h"
-#include "ui_lessonschedule.h"
+#include "lessonschedulewidget.h"
+#include "ui_lessonschedulewidget.h"
 
 #include "addscheduledialog.h"
-#include "schoolsubject.h"
+#include "src/model/schoolsubject.h"
 #include <QDebug>
 
-LessonSchedule::LessonSchedule(QWidget *parent) :
+LessonScheduleWidget::LessonScheduleWidget(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::LessonSchedule)
+    ui(new Ui::LessonScheduleWidget)
 {
     ui->setupUi(this);
     model = new LessonScheduleModel();
     ui->scheduleTable->setModel(model);
 }
 
-LessonSchedule::~LessonSchedule()
+LessonScheduleWidget::~LessonScheduleWidget()
 {
     delete ui;
 }
 
-void LessonSchedule::editEntry(QModelIndex index)
+void LessonScheduleWidget::editEntry(QModelIndex index)
 {
     AddScheduleDialog *dialog = new AddScheduleDialog(index.column(), index.row(), this);
     dialog->exec();

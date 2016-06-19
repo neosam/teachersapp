@@ -2,8 +2,8 @@
 #define CLASSSELECTIONWIDGET_H
 
 #include <QWidget>
-#include "school.h"
-#include "schoolclass.h"
+#include "src/model/school.h"
+#include "src/model/schoolclass.h"
 
 class ClassSelectionWidget : public QWidget
 {

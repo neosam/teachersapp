@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "school.h"
-#include "schoolclass.h"
+#include "src/model/school.h"
+#include "src/model/schoolclass.h"
 
 namespace Ui {
 class MainWindow;

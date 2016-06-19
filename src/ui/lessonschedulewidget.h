@@ -5,19 +5,19 @@
 #include "lessonschedulemodel.h"
 
 namespace Ui {
-class LessonSchedule;
+class LessonScheduleWidget;
 }
 
-class LessonSchedule : public QWidget
+class LessonScheduleWidget : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit LessonSchedule(QWidget *parent = 0);
-    ~LessonSchedule();
+    explicit LessonScheduleWidget(QWidget *parent = 0);
+    ~LessonScheduleWidget();
 
 private:
-    Ui::LessonSchedule *ui;
+    Ui::LessonScheduleWidget *ui;
     LessonScheduleModel *model;
 
 public slots:

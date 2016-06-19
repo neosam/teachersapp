@@ -14,45 +14,47 @@ TEMPLATE = app
 GIT_VERSION = $$system(git --git-dir $$PWD/.git --work-tree $$PWD describe --always --tags --dirty)
 DEFINES += GIT_VERSION=\\\"$$GIT_VERSION\\\"
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    dataio.cpp \
-    school.cpp \
-    pupil.cpp \
-    schoolclasswidget.cpp \
-    classselectionwidget.cpp \
-    schoolclass.cpp \
-    schoolclassitemwidget.cpp \
-    classdetailwidget.cpp \
-    pupiltablemodel.cpp \
-    lessonlistwidget.cpp \
-    lessonschedulemodel.cpp \
-    lessonschedule.cpp \
-    lesson.cpp \
-    addscheduledialog.cpp \
-    schoolsubject.cpp
+SOURCES += src/main.cpp\
+    src/ui/mainwindow.cpp \
+    src/dataio.cpp \
+    src/model/school.cpp \
+    src/model/pupil.cpp \
+    src/ui/schoolclasswidget.cpp \
+    src/ui/classselectionwidget.cpp \
+    src/model/schoolclass.cpp \
+    src/ui/schoolclassitemwidget.cpp \
+    src/ui/classdetailwidget.cpp \
+    src/ui/pupiltablemodel.cpp \
+    src/ui/lessonlistwidget.cpp \
+    src/ui/lessonschedulemodel.cpp \
+    src/model/lesson.cpp \
+    src/ui/addscheduledialog.cpp \
+    src/model/schoolsubject.cpp \
+    src/ui/lessonschedulewidget.cpp \
+    src/model/lessonschedule.cpp
 
-HEADERS  += mainwindow.h \
-    dataio.h \
-    school.h \
-    pupil.h \
-    schoolclasswidget.h \
-    classselectionwidget.h \
-    schoolclass.h \
-    schoolclassitemwidget.h \
-    classdetailwidget.h \
-    pupiltablemodel.h \
-    lessonlistwidget.h \
-    lessonschedulemodel.h \
-    lessonschedule.h \
-    lesson.h \
-    addscheduledialog.h \
-    schoolsubject.h
+HEADERS  += src/ui/mainwindow.h \
+    src/dataio.h \
+    src/model/school.h \
+    src/model/pupil.h \
+    src/ui/schoolclasswidget.h \
+    src/ui/classselectionwidget.h \
+    src/model/schoolclass.h \
+    src/ui/schoolclassitemwidget.h \
+    src/ui/classdetailwidget.h \
+    src/ui/pupiltablemodel.h \
+    src/ui/lessonlistwidget.h \
+    src/ui/lessonschedulemodel.h \
+    src/model/lesson.h \
+    src/ui/addscheduledialog.h \
+    src/model/schoolsubject.h \
+    src/ui/lessonschedulewidget.h \
+    src/model/lessonschedule.h
 
-FORMS    += mainwindow.ui \
-    schoolclasswidget.ui \
-    schoolclassitemwidget.ui \
-    classdetailwidget.ui \
-    lessonlistwidget.ui \
-    lessonschedule.ui \
-    addscheduledialog.ui
+FORMS    += src/ui/mainwindow.ui \
+    src/ui/schoolclasswidget.ui \
+    src/ui/schoolclassitemwidget.ui \
+    src/ui/classdetailwidget.ui \
+    src/ui/lessonlistwidget.ui \
+    src/ui/addscheduledialog.ui \
+    src/ui/lessonschedulewidget.ui

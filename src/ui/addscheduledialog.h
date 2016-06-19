@@ -2,7 +2,7 @@
 #define ADDSCHEDULEDIALOG_H
 
 #include <QDialog>
-#include <schoolsubject.h>
+#include "src/model/schoolsubject.h"
 
 namespace Ui {
 class AddScheduleDialog;

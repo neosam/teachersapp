@@ -1,5 +1,4 @@
-#include "mainwindow.h"
-#include "school.h"
+#include "src/ui/mainwindow.h"
 #include "dataio.h"
 #include <QApplication>
 #include <QDebug>

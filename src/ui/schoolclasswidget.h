@@ -2,8 +2,8 @@
 #define SCHOOLCLASSWIDGET_H
 
 #include <QWidget>
-#include "school.h"
-#include "schoolclass.h"
+#include "src/model/school.h"
+#include "src/model/schoolclass.h"
 #include "QVBoxLayout"
 
 namespace Ui {

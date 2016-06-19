@@ -1,6 +1,6 @@
 #include "schoolclasswidget.h"
 #include "ui_schoolclasswidget.h"
-#include "schoolclass.h"
+#include "src/model/schoolclass.h"
 
 #include <QInputDialog>
 #include "schoolclassitemwidget.h"

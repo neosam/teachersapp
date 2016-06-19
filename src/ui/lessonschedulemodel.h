@@ -5,7 +5,7 @@
 #include <QAbstractTableModel>
 #include <QMap>
 #include "lessonschedulemodel.h"
-#include "schoolsubject.h"
+#include "src/model/schoolsubject.h"
 
 class LessonScheduleModel : public QAbstractTableModel
 {

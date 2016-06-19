@@ -3,7 +3,7 @@
 
 #include <QAbstractTableModel>
 #include <QList>
-#include "pupil.h"
+#include "src/model/pupil.h"
 
 class PupilTableModel : public QAbstractTableModel
 {

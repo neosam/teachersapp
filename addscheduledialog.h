@@ -2,6 +2,7 @@
 #define ADDSCHEDULEDIALOG_H
 
 #include <QDialog>
+#include <schoolsubject.h>
 
 namespace Ui {
 class AddScheduleDialog;
@@ -12,11 +13,17 @@ class AddScheduleDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit AddScheduleDialog(QWidget *parent = 0);
+    explicit AddScheduleDialog(int weekday, int lessonCount, QWidget *parent = 0);
     ~AddScheduleDialog();
+
+    QString getWeekdayString() const;
+
+    SchoolSubject selectedSubject() const;
 
 private:
     Ui::AddScheduleDialog *ui;
+    int weekday;
+    int lessonCount;
 };
 
 #endif // ADDSCHEDULEDIALOG_H

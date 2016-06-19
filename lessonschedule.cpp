@@ -2,6 +2,8 @@
 #include "ui_lessonschedule.h"
 
 #include "addscheduledialog.h"
+#include "schoolsubject.h"
+#include <QDebug>
 
 LessonSchedule::LessonSchedule(QWidget *parent) :
     QWidget(parent),
@@ -19,7 +21,9 @@ LessonSchedule::~LessonSchedule()
 
 void LessonSchedule::editEntry(QModelIndex index)
 {
-    AddScheduleDialog *dialog = new AddScheduleDialog(this);
+    AddScheduleDialog *dialog = new AddScheduleDialog(index.column(), index.row(), this);
     dialog->exec();
     dialog->deleteLater();
+    SchoolSubject subject = dialog->selectedSubject();
+    qDebug() << subject.getName();
 }

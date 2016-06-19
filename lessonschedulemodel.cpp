@@ -7,9 +7,20 @@ LessonScheduleModel::LessonScheduleModel()
 
 }
 
+QString LessonScheduleModel::indexToKey(const QModelIndex &index) const {
+    return QVariant(index.column()).toString() + "-" +
+            QVariant(index.row()).toString();
+}
+
 QVariant LessonScheduleModel::data(const QModelIndex &index, int role) const {
     if (role == Qt::DisplayRole) {
-        return "";
+        QString key = indexToKey(index);
+        if (dataMap.contains(key)) {
+            SchoolSubject subject = dataMap.value(key);
+            return subject.getName();
+        } else {
+            return "";
+        }
     } else {
         return QVariant();
     }
@@ -36,3 +47,7 @@ QVariant LessonScheduleModel::headerData(int section, Qt::Orientation orientatio
 }
 
 
+void LessonScheduleModel::insert(const QModelIndex &index, SchoolSubject subject) {
+    QString key = indexToKey(index);
+    dataMap.insert(key, subject);
+}

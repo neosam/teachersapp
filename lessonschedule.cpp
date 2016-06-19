@@ -26,4 +26,5 @@ void LessonSchedule::editEntry(QModelIndex index)
     dialog->deleteLater();
     SchoolSubject subject = dialog->selectedSubject();
     qDebug() << subject.getName();
+    model->insert(index, subject);
 }

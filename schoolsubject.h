@@ -11,6 +11,7 @@ private:
     QString name;
 
 public:
+    SchoolSubject(): key(QUuid()), name(QString()) {}
     SchoolSubject(QUuid key, QString name);
 
     static QList<SchoolSubject> all();
